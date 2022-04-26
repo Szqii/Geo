@@ -1,0 +1,81 @@
+@import url(/Users/sezgialtan/Repos/geo/styles/style.css);
+.country-list {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 21.6%;
+      grid-template-areas: "a a a a a";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.country-list .country-item {
+  width: 260px;
+  height: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  margin-bottom: 70px;
+  background-color: var(--elColor);
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-transition: 0.2s -webkit-transform ease-in-out;
+  transition: 0.2s -webkit-transform ease-in-out;
+  transition: 0.2s transform ease-in-out;
+  transition: 0.2s transform ease-in-out, 0.2s -webkit-transform ease-in-out;
+}
+
+.country-list .country-item:hover {
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.country-list .country-item .country-flag {
+  width: 100%;
+  height: 160px;
+}
+
+.country-list .country-item .country-flag img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.country-list .country-item .country-name {
+  color: var(--textColor);
+  font-weight: 800;
+  padding: 25px 0;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+}
+
+.country-list .country-item .country-info {
+  padding: 0 25px;
+  font-size: 14px;
+  color: var(--textColor);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.country-list .country-item .country-info div {
+  margin-bottom: 2px;
+}
+
+.country-list .country-item .country-info span {
+  font-weight: 400;
+}
+/*# sourceMappingURL=countryList.css.map */

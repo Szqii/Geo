@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap");
+:root {
+  --elColor: rgb(255, 255, 255);
+  --bgColor: rgb(250, 250, 250);
+  --textColor: rgb(17, 21, 23);
+}
+
+html[data-theme="dark"] {
+  --elColor: rgb(43, 57, 69);
+  --bgColor: rgb(32, 44, 55);
+  --textColor: rgb(255, 255, 255);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bgColor);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+main {
+  width: 100%;
+  padding: 50px 70px;
+}
+
+main#main-detail {
+  display: none;
+}
+
+main#main-detail h1 {
+  margin-top: 200px;
+}
+
+main#main-list {
+  display: block;
+}
+
+.back-btn-container {
+  margin: 100px 0 60px 0;
+  width: 200px;
+}
+
+.back-btn-container .back-btn {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 20px 15px;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--elColor);
+  color: var(--textColor);
+  position: relative;
+}
+
+.back-btn-container .back-btn:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: calc(1px/ -1);
+  left: calc(1px/ -1);
+  background: -webkit-gradient(linear, left top, right top, from(var(--textColor)), to(var(--textColor))), -webkit-gradient(linear, left bottom, left top, color-stop(50%, var(--textColor)), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, var(--textColor)), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(var(--textColor)), to(var(--textColor))), -webkit-gradient(linear, right top, left top, from(var(--textColor)), to(var(--textColor)));
+  background: linear-gradient(to right, var(--textColor) 0%, var(--textColor) 100%), linear-gradient(to top, var(--textColor) 50%, transparent 50%), linear-gradient(to top, var(--textColor) 50%, transparent 50%), linear-gradient(to right, var(--textColor) 0%, var(--textColor) 100%), linear-gradient(to left, var(--textColor) 0%, var(--textColor) 100%);
+  background-size: 100% 1px, 1px 200%, 1px 200%, 0% 1px, 0% 1px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  -webkit-transition: background-position 0.1s ease-in-out, background-size 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+  transition: background-position 0.1s ease-in-out, background-size 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, background-position 0.1s ease-in-out, background-size 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, background-position 0.1s ease-in-out, background-size 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+  -webkit-transform: scaleX(0) rotate(180deg);
+          transform: scaleX(0) rotate(180deg);
+  -webkit-transition-delay: 0.2s, 0.1s, 0s;
+          transition-delay: 0.2s, 0.1s, 0s;
+}
+
+.back-btn-container .back-btn:hover:before {
+  background-size: 200% 1px, 1px 400%, 1px 400%, 55% 1px, 55% 1px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  -webkit-transform: scaleX(1) rotate(180deg);
+          transform: scaleX(1) rotate(180deg);
+  -webkit-transition-delay: 0s, 0.1s, 0.2s;
+          transition-delay: 0s, 0.1s, 0.2s;
+}
+
+.back-btn-container .back-btn i {
+  position: absolute;
+  left: 50px;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+}
+
+.back-btn-container .back-btn:hover i {
+  left: 20px;
+}
+/*# sourceMappingURL=backButton.css.map */

@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap");
+:root {
+  --elColor: rgb(255, 255, 255);
+  --bgColor: rgb(250, 250, 250);
+  --textColor: rgb(17, 21, 23);
+}
+
+html[data-theme="dark"] {
+  --elColor: rgb(43, 57, 69);
+  --bgColor: rgb(32, 44, 55);
+  --textColor: rgb(255, 255, 255);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bgColor);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+main {
+  width: 100%;
+  padding: 50px 70px;
+}
+
+main#main-detail {
+  display: none;
+}
+
+main#main-detail h1 {
+  margin-top: 200px;
+}
+
+main#main-list {
+  display: block;
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: "Nunito Sans", sans-serif;
+  width: 200px;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+}
+
+/* Style the arrow inside the select element: */
+.select-selected::after {
+  position: absolute;
+  content: "";
+  top: 25px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--textColor) transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active::after {
+  border-color: transparent transparent var(--textColor) transparent;
+  top: 18px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: var(--textColor);
+  padding: 19px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--elColor);
+  margin-bottom: 7px;
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: var(--bgColor);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-radius: 5px;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/*# sourceMappingURL=filter.css.map */

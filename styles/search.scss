@@ -1,0 +1,41 @@
+@import "./style.scss";
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+  .search-input-container {
+    width: 500px;
+    position: relative;
+
+    .search-icon {
+      width: 14px;
+      position: absolute;
+      top: calc(50% - 7px);
+      left: 20px;
+    }
+    .search-input {
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      padding: 20px 60px;
+      font-size: 14px;
+      font-weight: 400;
+      box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.1);
+      background-color: var(--elColor);
+      color: var(--textColor);
+      font-family: "Nunito Sans", sans-serif;
+      outline: none;
+
+      &::placeholder {
+        color: var(--textColor);
+        opacity: 0.8;
+      }
+
+      &:focus {
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "./style.scss";
+
+header {
+  background: var(--elColor);
+  color: var(--textColor);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 70px;
+  box-shadow: 0px 5px 8px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 99;
+  top: 0;
+
+  .title {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  .mode-toggle-btn {
+    cursor: pointer;
+    font-size: 24px;
+    @include magic-border(1px, var(--textColor), 0.1s, 0);
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+
+    span {
+      max-width: 0;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: "Nunito Sans", sans-serif;
+      margin-left: 10px;
+      transition: 0.3s all ease-in-out;
+
+      display: inline-block;
+      align-items: center;
+      vertical-align: top;
+      white-space: nowrap;
+      overflow: hidden;
+      overflow: hidden;
+    }
+
+    &:hover {
+      span {
+        max-width: 7rem;
+      }
+    }
+  }
+}

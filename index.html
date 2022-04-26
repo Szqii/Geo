@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geo</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon-world.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/header.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/filter.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/search.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/countryList.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/backButton.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/countryDetail.css" />
+    <script
+      src="https://kit.fontawesome.com/160edd8076.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="title">Where in the World?</div>
+      <div class="mode-toggle-btn">
+        <i class="fa fa-cloud-moon" id="theme-icon"> </i>
+        <span class="mode-text">Dark Mode </span>
+      </div>
+    </header>
+    <main id="main-list">
+      <div class="search-bar">
+        <div class="search-input-container">
+          <img
+            class="search-icon"
+            src="./assets/search-icon.svg"
+            alt="Search Icon"
+          />
+          <input
+            class="search-input"
+            id="search-input"
+            type="text"
+            placeholder="Search for a country..."
+            autocomplete="off"
+          />
+        </div>
+        <div class="custom-select">
+          <select name="region-filter" class="region-filter" id="region-filter">
+            <option value="">Filter by region</option>
+            <option value="all">All</option>
+            <option value="africa">Africa</option>
+            <option value="america">America</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="ocenia">Ocenia</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="country-list">
+        <!-- Auto-fill list of countries -->
+      </div>
+    </main>
+    <main id="main-detail">
+      <div class="back-btn-container">
+        <div class="back-btn">
+          <i class="fa fa-arrow-left"></i>
+          Back
+        </div>
+      </div>
+    </main>
+
+    <script src="./script/themeSwitcher.js"></script>
+    <script src="./script//filter.js"></script>
+    <script src="./script/getCountries.js"></script>
+  </body>
+</html>
